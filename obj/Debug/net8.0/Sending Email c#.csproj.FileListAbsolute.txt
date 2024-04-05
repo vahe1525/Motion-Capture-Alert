@@ -1,0 +1,14 @@
+/home/vahe1525/Documents/Vahe_Karmirshalyan/Camera/CapturingMotion/bin/Debug/net8.0/Sending Email c#
+/home/vahe1525/Documents/Vahe_Karmirshalyan/Camera/CapturingMotion/bin/Debug/net8.0/Sending Email c#.deps.json
+/home/vahe1525/Documents/Vahe_Karmirshalyan/Camera/CapturingMotion/bin/Debug/net8.0/Sending Email c#.runtimeconfig.json
+/home/vahe1525/Documents/Vahe_Karmirshalyan/Camera/CapturingMotion/bin/Debug/net8.0/Sending Email c#.dll
+/home/vahe1525/Documents/Vahe_Karmirshalyan/Camera/CapturingMotion/bin/Debug/net8.0/Sending Email c#.pdb
+/home/vahe1525/Documents/Vahe_Karmirshalyan/Camera/CapturingMotion/obj/Debug/net8.0/Sending Email c#.GeneratedMSBuildEditorConfig.editorconfig
+/home/vahe1525/Documents/Vahe_Karmirshalyan/Camera/CapturingMotion/obj/Debug/net8.0/Sending Email c#.AssemblyInfoInputs.cache
+/home/vahe1525/Documents/Vahe_Karmirshalyan/Camera/CapturingMotion/obj/Debug/net8.0/Sending Email c#.AssemblyInfo.cs
+/home/vahe1525/Documents/Vahe_Karmirshalyan/Camera/CapturingMotion/obj/Debug/net8.0/Sending Email c#.csproj.CoreCompileInputs.cache
+/home/vahe1525/Documents/Vahe_Karmirshalyan/Camera/CapturingMotion/obj/Debug/net8.0/Sending Email c#.dll
+/home/vahe1525/Documents/Vahe_Karmirshalyan/Camera/CapturingMotion/obj/Debug/net8.0/refint/Sending Email c#.dll
+/home/vahe1525/Documents/Vahe_Karmirshalyan/Camera/CapturingMotion/obj/Debug/net8.0/Sending Email c#.pdb
+/home/vahe1525/Documents/Vahe_Karmirshalyan/Camera/CapturingMotion/obj/Debug/net8.0/Sending Email c#.genruntimeconfig.cache
+/home/vahe1525/Documents/Vahe_Karmirshalyan/Camera/CapturingMotion/obj/Debug/net8.0/ref/Sending Email c#.dll

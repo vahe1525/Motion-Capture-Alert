@@ -1,0 +1,8 @@
+
+#define CAMERAWIDTH   1920 //
+#define CAMERAHEIGHT  1080 // 
+
+#define THRESHOLD 10
+#define PERCENTTHRESHOLD 80
+
+#define SCALE 5
