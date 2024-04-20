@@ -10,6 +10,7 @@
 
 //File Includes 
 #include "Algorithms/Capturer.hpp"
+#include "Logs/Logger.hpp"
 
 class Manager
 {
@@ -17,12 +18,15 @@ private:
 
 	void SendEmail()
 	{
-	   system("dotnet run"); 
+		Logger::Log("Sending Email function in Manager ");
+		system("dotnet run");
 	}
 
 	// Deleting Files in Output
 	void ClearingOutput()
 	{
+		Logger::Log("Output Cleaning Procces in Manager ");
+
 		std::cout << "Clearing Output..." << std::endl;
 
 		system("rm Output/* -r");
@@ -35,6 +39,8 @@ private:
 	//Taking User Data 
 	void TakeUserData()
 	{
+		Logger::Log("Taking User Info ");
+
 		//Saving File Path
 		std::string filePath = "Data/Data.txt";
 
@@ -69,7 +75,9 @@ private:
 
 public:
 	void Start()
-	{		
+	{
+		Logger::Log("Manager Start Function has started");
+
 	    //Taking user Data
 	    TakeUserData();
 

@@ -9,6 +9,7 @@
 #include "../Data/Constants.hpp"
 #include "../CameraFiles/Matrix.hpp"
 #include "../CameraFiles/Pixel.hpp"
+#include "../Logs/Logger.hpp"
 #include "DifferenceOfColors.hpp"
 
 //Standart libraries
@@ -33,6 +34,8 @@ public:
 
     double ComparePictures(const std::shared_ptr<Matrix> matrix1, const std::shared_ptr<Matrix> matrix2)
     {
+		Logger::Log("Comparer Compare Pictures functions start point ");
+
 	//loops for dividing matrix into grids
 	for(int x = 0; x < CAMERAHEIGHT / SCALE; ++x)
 	{
@@ -60,6 +63,7 @@ public:
 	//calculating percent of similarity of 2 pictures
 	percent = (countOfTrueGrid / GridsCount) * 100;
 
+	Logger::Log("Comparison succesfully completed ");
 	return percent;   
     }
 };

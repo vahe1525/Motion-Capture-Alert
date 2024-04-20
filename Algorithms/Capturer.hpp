@@ -12,6 +12,7 @@
 #include "../CameraFiles/Matrix.hpp"
 #include "../CameraFiles/BMPExporter.hpp"
 #include "../CameraFiles/Webcam.hpp"
+#include "../Logs/Logger.hpp"
 #include "Comparer.hpp"
 #include "CameraFilesChecker.hpp"
 
@@ -27,12 +28,12 @@ private:
 	// Light Adjusting
 	void LightAdjusting(Webcam &adjuster)
 	{
-		std::cout << "Light adjusting starting" << std::endl;
+		Logger::Log("Light adjusting starting ");
 		for (int i = 0; i < 40; ++i)
 		{
 			adjuster.Frame();
 		}
-		std::cout << "Light adjusting finished" << std::endl;
+		Logger::Log("Light adjusting finished ");
 	}
 
 	// Updates the name of exporting picture
@@ -47,6 +48,8 @@ private:
 
 	bool Capture(std::string device)
 	{
+		Logger::Log("Capture function start point");
+
 	    // Webcam object
 	    Webcam webcam(device);
 
@@ -57,14 +60,15 @@ private:
 	    // Light adjusting
 	    LightAdjusting(webcam);
 
-	    std::cout << "Video Surveillance is started " << std::endl;
+		Logger::Log("Video Surveillance is started ");
 	    while (true)
 	    {
-		if(fixedMotion >= 8)
-		{
-		    return false; 
-		}
+			if (fixedMotion >= 8)
+			{
+				return false;
+			}
 
+		Logger::Log("Reading Frame ");
 		// Reading frame
 		current = webcam.Frame();
 
@@ -72,9 +76,10 @@ private:
 		ImageComparer comparer;
 
 		// checking matrixes content
+		Logger::Log("Working on frames ");
 		if (!current->IsEmpty() && !previous->IsEmpty())
 		{
-		    // Comparing pictures/t
+		    // Comparing pictures
 		    double percent = comparer.ComparePictures(current, previous);
 
 		    // Exporter objects
@@ -82,16 +87,16 @@ private:
 
 		    // Checking Motion in frame
 		    if (percent < PERCENTTHRESHOLD)
-		    {
-			std::string name = UpdatingNameOfPicture();
-			//std::cout << "There is a motion in the frame!!! Look the pictures! " << std::endl;
-			
-			// Exporting Pictures
-			exporter.Export(current, name);
-			name = UpdatingNameOfPicture();
-			exporter.Export(previous, name);
-			++fixedMotion;
-		    }
+			{
+				std::string name = UpdatingNameOfPicture();
+				// std::cout << "There is a motion in the frame!!! Look the pictures! " << std::endl;
+
+				// Exporting Pictures
+				exporter.Export(current, name);
+				name = UpdatingNameOfPicture();
+				exporter.Export(previous, name);
+				++fixedMotion;
+			}
 		}
 		// Updating previous matrix
 		previous = current;
@@ -103,19 +108,29 @@ private:
 public:
 	bool Start()
 	{
+		//Logging
+		Logger::Log("Capturer Start Function start point ");
+
 	    // Finding device for reading Frame
 	    CameraFilesChecker checker;
 	    std::string device = checker.CheckCameraFiles();
 
 	    try
 	    {
-		bool res = Capture(device);
-		return res;
+			Logger::Log("Calling Capture Function in try block ");
+
+			//Calling Capture function
+			bool res = Capture(device);
+			return res;
 	    }
 	    catch (const std::runtime_error &e)
 	    {
-		std::cout << "From Capturer caught error" << e.what() <<  std::endl;
-		return true;
+			std::stringstream ss;
+			ss << "Caught an exception in Capturer Start Function, error message ->";
+			ss << e.what();
+			Logger::Log(ss.str());
+			//std::cout << "From Capturer caught error" << e.what() << std::endl;
+			return true;
 	    }
 	}
 };

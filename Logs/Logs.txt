@@ -1,0 +1,24 @@
+Manager Start Function has started:: log time -> :Sat Apr 20 22:26:32 2024
+
+Taking User Info :: log time -> :Sat Apr 20 22:26:32 2024
+
+Output Cleaning Procces in Manager :: log time -> :Sat Apr 20 22:26:40 2024
+
+Capturer Start Function start point :: log time -> :Sat Apr 20 22:26:40 2024
+
+Camera File checker start point :: log time -> :Sat Apr 20 22:26:40 2024
+
+Throwing Exception (Capture Device Not found) in Camera Checker :: log time -> :Sat Apr 20 22:26:40 2024
+
+Manager Start Function has started:: log time -> :Sat Apr 20 22:26:54 2024
+
+Taking User Info :: log time -> :Sat Apr 20 22:26:54 2024
+
+Output Cleaning Procces in Manager :: log time -> :Sat Apr 20 22:27:11 2024
+
+Capturer Start Function start point :: log time -> :Sat Apr 20 22:27:11 2024
+
+Camera File checker start point :: log time -> :Sat Apr 20 22:27:11 2024
+
+Throwing Exception (Capture Device Not found) in Camera Checker :: log time -> :Sat Apr 20 22:27:11 2024
+
