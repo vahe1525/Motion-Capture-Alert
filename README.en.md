@@ -1,5 +1,11 @@
 # 🖥️ Motion Capture Alert
 
+**🌐 Choose language: Ընտրեք լեզուն:** 
+
+[🇦🇲 Հայերեն](README.md) | [🇬🇧 English](README.en.md)
+
+---
+
 **Motion Capture Alert** is a project designed for motion detection and user notification when changes are detected in frames captured from a camera connected to the computer.  
 
 The project combines **C++** and **C#** to ensure high-performance frame processing and seamless communication with the user.
